@@ -37,7 +37,7 @@ if (!Configuration::get('EBAY_SECURITY_TOKEN') || Tools::getValue('token') != Co
 
 $category_list = $ebay->getChildCategories(Category::getCategories(Tools::getValue('id_lang')), version_compare(_PS_VERSION_, '1.5', '>') ? 1 : 0);
 
-$offset = 20;
+$offset = 100;
 $page = (int)Tools::getValue('p', 0);
 if ($page < 2)
 	$page = 1;
